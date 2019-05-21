@@ -1,23 +1,44 @@
 body {
     margin: 0;
 }
+
+.logo-pic {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 8vh;
+    width: auto;
+    z-index: 2;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    opacity: 0.9;
+    background-color: grey;
+    height: 8vh;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+
+
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-auto-rows: minmax(100px, auto);
-    
+
 }
 
 .wrapper>div {
     padding: 1em;
 }
 
-.wrapper>div:nth-child(odd) {
-    background-color: grey;
-}
+
 
 .box1 {
     grid-column: 1/4;
+    grid-row: 0;
     height: 10vh;
 }
 
@@ -26,22 +47,29 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     grid-column: 1/4;
-    grid-row: 2/4;
+    grid-row: 1/4;
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    height: 77vh;
+    grid-template-columns: 1fr 2fr 3fr;
+    height: 95vh;
 }
 
 .logo {
-    grid-column: 1;
-    grid-row: 1;
-    border: 2px solid black;
+    grid-column: 1/4;
+    grid-row: 3;
+    align-self: end;
+    justify-self: start;
+    color: white;
+    padding: 2em;
+    font-size: 1.5em;
+    font-style: italic;
 }
 
 .weather-app {
-    grid-column: 3;
-    grid-row: 1/3;
-    border: 2px solid black;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    justify-self: center;
+    align-self: center;
+    border: 1px solid black;
 }
 
 .box3 {
@@ -49,13 +77,15 @@ body {
     grid-row: 4;
 }
 
-form, .fishesContainer {
+form,
+.fishesContainer {
     max-width: 350px;
     margin: 0 auto;
     text-transform: capitalize;
 }
 
-.logCatchButton {
+.logCatchButton, .button-primary {
+    margin-top: 3em;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -71,9 +101,11 @@ form, .fishesContainer {
 
 .summary {
     background-color: aqua;
+    height: 200px;
 }
 
 .box5 {
     grid-column: 1/4;
+    grid-row: 6;
+    height: auto;
 }
-

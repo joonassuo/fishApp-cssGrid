@@ -4,7 +4,7 @@ const fishesContainer = document.querySelector('.fishesContainer');
 const niceCatchPic = document.querySelector('.catchPic');
 const API_URL = "http://localhost:5000/fishes";
 
-form.style.display = 'none';
+form.style.display = '';
 
 // toggle form display
 logCatchButton.addEventListener('click', () => {
