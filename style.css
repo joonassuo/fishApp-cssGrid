@@ -7,7 +7,7 @@ body {
     top: 0;
     left: 0;
     height: 8vh;
-    width: auto;
+    width: 8vh;
     z-index: 2;
 }
 
@@ -60,16 +60,30 @@ body {
     justify-self: start;
     color: white;
     padding: 2em;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-style: italic;
 }
 
 .weather-app {
+    padding: 3em;
+    background: rgba(200, 54, 54, 0.2);
+    text-align: center;
+    color: white;
     grid-column: 1/4;
     grid-row: 2/3;
     justify-self: center;
     align-self: center;
-    border: 1px solid black;
+}
+
+.day {
+    font-size: 2em;
+}
+
+.weather-pic {
+    margin: 0 auto;
+    height: 7em;
+    width: auto;
+    display: block;
 }
 
 .box3 {
